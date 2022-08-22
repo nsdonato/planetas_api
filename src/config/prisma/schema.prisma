@@ -1,11 +1,43 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mongodb"
   url      = env("DATABASE_URL")
+}
+
+type PlanetasGeology {
+  content String
+  source  String
+}
+
+type PlanetasImages {
+  geology  String
+  internal String
+  planet   String
+}
+
+type PlanetasOverview {
+  content String
+  source  String
+}
+
+type PlanetasStructure {
+  content String
+  source  String
+}
+
+model planetas {
+  id          String            @id @default(auto()) @map("_id") @db.ObjectId
+  v           Int               @map("__v")
+  geology     PlanetasGeology
+  images      PlanetasImages
+  name        String            @unique(map: "name_1")
+  overview    PlanetasOverview
+  radius      String
+  revolution  String
+  rotation    String
+  structure   PlanetasStructure
+  temperature String
 }
