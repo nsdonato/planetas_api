@@ -19,3 +19,9 @@ Esto hace que se utilicé la versión que está configurada en el archivo .nvmrc
 - `/api/planetas` fecth all user
 - `/api/planetas/:id` fecth a single planet by its name
 
+## Diagrama de la base de datos
+
+Dos tablas con relación uno a uno.
+
+![diagrama db](docs/diagrama%20db.png)
+
