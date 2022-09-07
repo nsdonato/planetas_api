@@ -1,16 +1,18 @@
 import { PrismaClient } from '@prisma/client'
-import planetaSeeder from './seeders/planeta'
+import planetaSeeder from './seeders/planets'
 
 const prisma = new PrismaClient()
 
 async function seed() {
-	const planetas = planetaSeeder.map((item) => {
-		return prisma.planeta.create({
+	const planets = planetaSeeder.map((item) => {
+		return prisma.planet.create({
 			data: item,
 		})
 	})
 
-	await Promise.all(planetas)
+	await Promise.all(planets)
+
+	console.log(planets)
 }
 
 seed()
