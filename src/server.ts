@@ -1,11 +1,11 @@
 import express, { Application } from 'express'
-import planetasRoutes from '@routes/planetas'
+import planetsRoutes from '@routes/planets'
 
 class Server {
 	private app: Application
 	private port: string
 	private apiPaths = {
-		planetas: '/api/planetas',
+		planet: '/api/planet',
 	}
 
 	constructor() {
@@ -16,7 +16,7 @@ class Server {
 	}
 
 	routes() {
-		this.app.use(this.apiPaths.planetas, planetasRoutes)
+		this.app.use(this.apiPaths.planet, planetsRoutes)
 	}
 
 	listen() {
