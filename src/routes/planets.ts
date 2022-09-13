@@ -1,9 +1,7 @@
 import { Router } from 'express'
-import { getAllPlanets, getFindOne } from '@controllers/planets'
+import { getFindOne } from '@controllers/planets'
 
 const router = Router()
-
-router.get('/', getAllPlanets)
 
 router.get('/:id', getFindOne)
 

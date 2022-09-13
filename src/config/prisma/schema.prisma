@@ -7,20 +7,48 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Planet {
-  id              String           @id @default(auto()) @map("_id") @db.ObjectId
-  name            String
-  description     String
-  linkWikipedia   String
-  planetStatistic PlanetStatistic?
+model Overview {
+  id      String  @id @default(auto()) @map("_id") @db.ObjectId
+  content String
+  source  String
+  Planet  Planet?
 }
 
-model PlanetStatistic {
-  id             String @id @default(auto()) @map("_id") @db.ObjectId
-  rotationTime   String
-  revolutionTime String
-  radius         String
-  averageTemp    String
-  planet         Planet @relation(fields: [planetId], references: [id])
-  planetId       String @unique @db.ObjectId
+model Structure {
+  id      String  @id @default(auto()) @map("_id") @db.ObjectId
+  content String
+  source  String
+  Planet  Planet?
+}
+
+model Geology {
+  id      String  @id @default(auto()) @map("_id") @db.ObjectId
+  content String
+  source  String
+  Planet  Planet?
+}
+
+model Images {
+  id       String  @id @default(auto()) @map("_id") @db.ObjectId
+  planet   String
+  interval String
+  geology  String
+  Planet   Planet?
+}
+
+model Planet {
+  id          String     @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  overview    Overview?  @relation(fields: [overviewId], references: [id])
+  overviewId  String     @unique @db.ObjectId
+  structure   Structure? @relation(fields: [structureId], references: [id])
+  structureId String     @unique @db.ObjectId
+  geology     Geology?   @relation(fields: [geologyId], references: [id])
+  geologyId   String     @unique @db.ObjectId
+  rotation    String
+  revolution  String
+  radius      String
+  temperature String
+  image       Images?    @relation(fields: [imageId], references: [id])
+  imageId     String     @unique @db.ObjectId
 }
