@@ -6,21 +6,48 @@ datasource db {
   provider = "mongodb"
   url      = env("DATABASE_URL")
 }
-
 model Planet {
-  id              String           @id @default(auto()) @map("_id") @db.ObjectId
-  name            String
-  description     String
-  linkWikipedia   String
-  planetStatistic PlanetStatistic?
+  id          String     @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  overview    Overview?
+  geology     Geology?
+  rotation    String
+  revolution  String
+  radius      String
+  temperature String
+  images      Images?
+  structure   Structure?
 }
 
-model PlanetStatistic {
-  id             String @id @default(auto()) @map("_id") @db.ObjectId
-  rotationTime   String
-  revolutionTime String
-  radius         String
-  averageTemp    String
-  planet         Planet @relation(fields: [planetId], references: [id])
-  planetId       String @unique @db.ObjectId
+model Overview {
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  content  String
+  source   String
+  relation Planet @relation(fields: [planetId], references: [id])
+  planetId String @unique @db.ObjectId
+}
+
+model Structure {
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  content  String
+  source   String
+  relation Planet @relation(fields: [planetId], references: [id])
+  planetId String @unique @db.ObjectId
+}
+
+model Geology {
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  content  String
+  source   String
+  relation Planet @relation(fields: [planetId], references: [id])
+  planetId String @unique @db.ObjectId
+}
+
+model Images {
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  planet   String
+  internal String
+  geology  String
+  relation Planet @relation(fields: [planetId], references: [id])
+  planetId String @unique @db.ObjectId
 }

@@ -1,11 +1,14 @@
-import { PlanetStatistic } from './planetStatistic'
+import { Overview } from './overview'
+import { Geology } from './geology'
+import { Images } from './images'
 
 export interface Planet {
 	name: string
-	description: string
-	linkWikipedia: string
-	planetFile: string
-	planetFileInternal: string
-	geologyFile: string
-	planetStatistic: PlanetStatistic
+	overview: Overview
+	geology: Geology
+	rotation: string
+	revolution: string
+	radius: string
+	temperature: string
+	images: Images
 }

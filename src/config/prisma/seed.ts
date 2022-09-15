@@ -4,15 +4,13 @@ import planetaSeeder from './seeders/planets'
 const prisma = new PrismaClient()
 
 async function seed() {
-	const planets = planetaSeeder.map((item) => {
-		return prisma.planet.create({
-			data: item,
-		})
-	})
-
-	await Promise.all(planets)
-
-	console.log(planets)
+	await Promise.all(
+		planetaSeeder.map(async (item) => {
+			await prisma.planet.create({
+				data: item,
+			})
+		}),
+	)
 }
 
 seed()
