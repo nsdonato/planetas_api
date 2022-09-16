@@ -3,19 +3,16 @@ import { Request, Response } from 'express'
 
 const prisma = new PrismaClient()
 
-export const getAllPlanets = async (req: Request, res: Response) => {
-	const planets = await prisma.planet.findMany()
-
-	return res.json(planets)
-}
-
 export const getFindOne = async (req: Request, res: Response) => {
 	const { id } = req.params
-	const planetParams =
-		id.charAt(0).toUpperCase() + id.slice(1).toLowerCase().trim()
 
-	const planet = await prisma.planet.findUnique({
-		where: { id: planetParams },
+	const planet = await prisma.planet.findFirst({
+		where: {
+			name: {
+				startsWith: id,
+				mode: 'insensitive',
+			},
+		},
 		include: {
 			geology: true,
 			images: true,
@@ -23,8 +20,7 @@ export const getFindOne = async (req: Request, res: Response) => {
 			structure: true,
 		},
 	})
-	if (!planet)
-		return res.status(404).send(`Not found this planet: ${planetParams}`)
+	if (!planet) return res.status(404).send(`Not found this planet: ${id}`)
 
 	return res.json(planet)
 }

@@ -32,9 +32,9 @@ const planetSeeder: Prisma.PlanetCreateInput[] = [
 		temperature: '430°c',
 		images: {
 			create: {
-				planet: './assets/planet-mercury.svg',
-				internal: './assets/planet-mercury-internal.svg',
-				geology: './assets/geology-mercury.png',
+				planet: '/planet-mercury.svg',
+				internal: '/planet-mercury-internal.svg',
+				geology: '/geology-mercury.png',
 			},
 		},
 	},
@@ -67,9 +67,9 @@ const planetSeeder: Prisma.PlanetCreateInput[] = [
 		temperature: '471°c',
 		images: {
 			create: {
-				planet: './assets/planet-venus.svg',
-				internal: './assets/planet-venus-internal.svg',
-				geology: './assets/geology-venus.png',
+				planet: '/planet-venus.svg',
+				internal: '/planet-venus-internal.svg',
+				geology: '/geology-venus.png',
 			},
 		},
 	},
@@ -102,9 +102,9 @@ const planetSeeder: Prisma.PlanetCreateInput[] = [
 		temperature: '16°c',
 		images: {
 			create: {
-				planet: './assets/planet-earth.svg',
-				internal: './assets/planet-earth-internal.svg',
-				geology: './assets/geology-earth.png',
+				planet: '/planet-earth.svg',
+				internal: '/planet-earth-internal.svg',
+				geology: '/geology-earth.png',
 			},
 		},
 	},
@@ -137,9 +137,9 @@ const planetSeeder: Prisma.PlanetCreateInput[] = [
 		temperature: '−28°c',
 		images: {
 			create: {
-				planet: './assets/planet-mars.svg',
-				internal: './assets/planet-mars-internal.svg',
-				geology: './assets/geology-mars.png',
+				planet: '/planet-mars.svg',
+				internal: '/planet-mars-internal.svg',
+				geology: '/geology-mars.png',
 			},
 		},
 	},
@@ -173,9 +173,9 @@ const planetSeeder: Prisma.PlanetCreateInput[] = [
 		temperature: '-108°c',
 		images: {
 			create: {
-				planet: './assets/planet-jupiter.svg',
-				internal: './assets/planet-jupiter-internal.svg',
-				geology: './assets/geology-jupiter.png',
+				planet: '/planet-jupiter.svg',
+				internal: '/planet-jupiter-internal.svg',
+				geology: '/geology-jupiter.png',
 			},
 		},
 	},
@@ -208,9 +208,9 @@ const planetSeeder: Prisma.PlanetCreateInput[] = [
 		temperature: '-138°c',
 		images: {
 			create: {
-				planet: './assets/planet-saturn.svg',
-				internal: './assets/planet-saturn-internal.svg',
-				geology: './assets/geology-saturn.png',
+				planet: '/planet-saturn.svg',
+				internal: '/planet-saturn-internal.svg',
+				geology: '/geology-saturn.png',
 			},
 		},
 	},
@@ -243,9 +243,9 @@ const planetSeeder: Prisma.PlanetCreateInput[] = [
 		temperature: '-195°c',
 		images: {
 			create: {
-				planet: './assets/planet-uranus.svg',
-				internal: './assets/planet-uranus-internal.svg',
-				geology: './assets/geology-uranus.png',
+				planet: '/planet-uranus.svg',
+				internal: '/planet-uranus-internal.svg',
+				geology: '/geology-uranus.png',
 			},
 		},
 	},
@@ -278,9 +278,9 @@ const planetSeeder: Prisma.PlanetCreateInput[] = [
 		temperature: '-201°c',
 		images: {
 			create: {
-				planet: './assets/planet-neptune.svg',
-				internal: './assets/planet-neptune-internal.svg',
-				geology: './assets/geology-neptune.png',
+				planet: '/planet-neptune.svg',
+				internal: '/planet-neptune-internal.svg',
+				geology: '/geology-neptune.png',
 			},
 		},
 	},
