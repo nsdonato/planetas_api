@@ -8,16 +8,15 @@ Para usar el proyecto tienen que tener instalado la última versión estable de 
 
 Esto hace que se utilicé la versión que está configurada en el archivo .nvmrc
 
-# 1. npm Install 
+# 1. npm Install
 
-# 2 . Renombrar `.env.template` a `.env` y completar las variables de entorno para que se pueda conectar a url de la base de datos 
+# 2 . Renombrar `.env.template` a `.env` y completar las variables de entorno para que se pueda conectar a url de la base de datos
 
-## localhost:8000/api/planetas 
+## localhost:8000/api/planetas
 
-## GET 
+## GET
 
-- `/api/planetas` fecth all user
-- `/api/planetas/:id` fecth a single planet by its name
+- `/api/planet/:id` fecth a single planet by its name
 
 ## Diagrama de la base de datos
 
