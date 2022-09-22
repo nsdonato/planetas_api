@@ -17,7 +17,8 @@
     "prisma:generate": "prisma generate --schema=./src/config/prisma/schema.prisma",
     "prisma:generate-watch": "prisma generate --watch --schema=./src/config/prisma/schema.prisma",
     "prisma:seed": "ts-node src/config/prisma/seed.ts",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "postinstall": "npm run prisma:generate"
   },
   "repository": {
     "type": "git",
