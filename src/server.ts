@@ -1,5 +1,6 @@
 import express, { Application } from 'express'
 import planetsRoutes from '@routes/planets'
+import cors from 'cors'
 
 class Server {
 	private app: Application
@@ -10,6 +11,7 @@ class Server {
 
 	constructor() {
 		this.app = express()
+		this.app.use(cors())
 		this.port = process.env.PORT || '8000'
 
 		this.routes()
