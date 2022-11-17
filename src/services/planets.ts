@@ -12,7 +12,34 @@ const getPlanet = async (name: string) => {
 		},
 		include: {
 			geology: true,
-			images: true,
+			images: {
+				select: {
+					planet: {
+						select: {
+							id: true,
+							small: true,
+							medium: true,
+							large: true,
+						},
+					},
+					geology: {
+						select: {
+							id: true,
+							small: true,
+							medium: true,
+							large: true,
+						},
+					},
+					internal: {
+						select: {
+							id: true,
+							small: true,
+							medium: true,
+							large: true,
+						},
+					},
+				},
+			},
 			overview: true,
 			structure: true,
 		},

@@ -45,9 +45,36 @@ model Geology {
 
 model Images {
   id       String @id @default(auto()) @map("_id") @db.ObjectId
-  planet   String
-  internal String
-  geology  String
+  planet   DetailPlanetImage?
+  internal DetailInternalImage?
+  geology  DetailGeologyImage?
   relation Planet @relation(fields: [planetId], references: [id])
   planetId String @unique @db.ObjectId
+}
+
+model DetailPlanetImage {
+  id      String @id @default(auto()) @map("_id") @db.ObjectId
+  small   String
+  medium  String
+  large   String
+  relation Images @relation(fields: [planetImageId], references: [id])
+  planetImageId String @unique @db.ObjectId
+}
+
+model DetailInternalImage {
+  id      String @id @default(auto()) @map("_id") @db.ObjectId
+  small   String
+  medium  String
+  large   String
+  relation Images @relation(fields: [internalImageId], references: [id])
+  internalImageId String @unique @db.ObjectId
+}
+
+model DetailGeologyImage {
+  id      String @id @default(auto()) @map("_id") @db.ObjectId
+  small   String
+  medium  String
+  large   String
+  relation Images @relation(fields: [geologyImageId], references: [id])
+  geologyImageId String @unique @db.ObjectId
 }
