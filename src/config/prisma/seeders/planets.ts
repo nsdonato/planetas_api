@@ -34,23 +34,23 @@ const planetSeeder: Prisma.PlanetCreateInput[] = [
 			create: {
 				planet: {
 					create: {
-						small: '/assets/planet-mercury-small.svg',
-						medium: '/assets/planet-mercury-medium.svg',
-						large: '/assets/planet-mercury.svg',
+						small: '/assets/planet-mercury-small',
+						medium: '/assets/planet-mercury-medium',
+						large: '/assets/planet-mercury',
 					},
 				},
 				internal: {
 					create: {
-						small: '/assets/planet-mercury-internal-small.svg',
-						medium: '/assets/planet-mercury-internal-medium.svg',
-						large: '/assets/planet-mercury-internal.svg',
+						small: '/assets/planet-mercury-internal-small',
+						medium: '/assets/planet-mercury-internal-medium',
+						large: '/assets/planet-mercury-internal',
 					},
 				},
 				geology: {
 					create: {
-						small: '/assets/geology-mercury-small.png',
-						medium: '/assets/geology-mercury-medium.png',
-						large: '/assets/geology-mercury.png',
+						small: '/assets/geology-mercury-small',
+						medium: '/assets/geology-mercury-medium',
+						large: '/assets/geology-mercury',
 					},
 				},
 			},
@@ -87,23 +87,23 @@ const planetSeeder: Prisma.PlanetCreateInput[] = [
 			create: {
 				planet: {
 					create: {
-						small: '/assets/planet-venus-small.svg',
-						medium: '/assets/planet-venus-medium.svg',
-						large: '/assets/planet-venus.svg',
+						small: '/assets/planet-venus-small',
+						medium: '/assets/planet-venus-medium',
+						large: '/assets/planet-venus',
 					},
 				},
 				internal: {
 					create: {
-						small: '/assets/planet-venus-internal-small.svg',
-						medium: '/assets/planet-venus-internal-medium.svg',
-						large: '/assets/planet-venus-internal.svg',
+						small: '/assets/planet-venus-internal-small',
+						medium: '/assets/planet-venus-internal-medium',
+						large: '/assets/planet-venus-internal',
 					},
 				},
 				geology: {
 					create: {
-						small: '/assets/geology-venus-small.png',
-						medium: '/assets/geology-venus-medium.png',
-						large: '/assets/geology-venus.png',
+						small: '/assets/geology-venus-small',
+						medium: '/assets/geology-venus-medium',
+						large: '/assets/geology-venus',
 					},
 				},
 			},
@@ -140,23 +140,23 @@ const planetSeeder: Prisma.PlanetCreateInput[] = [
 			create: {
 				planet: {
 					create: {
-						small: '/assets/planet-earth-small.svg',
-						medium: '/assets/planet-earth-medium.svg',
-						large: '/assets/planet-earth.svg',
+						small: '/assets/planet-earth-small',
+						medium: '/assets/planet-earth-medium',
+						large: '/assets/planet-earth',
 					},
 				},
 				internal: {
 					create: {
-						small: '/assets/planet-earth-internal-small.svg',
-						medium: '/assets/planet-earth-internal-medium.svg',
-						large: '/assets/planet-earth-internal.svg',
+						small: '/assets/planet-earth-internal-small',
+						medium: '/assets/planet-earth-internal-medium',
+						large: '/assets/planet-earth-internal',
 					},
 				},
 				geology: {
 					create: {
-						small: '/assets/geology-earth-small.png',
-						medium: '/assets/geology-earth-medium.png',
-						large: '/assets/geology-earth.png',
+						small: '/assets/geology-earth-small',
+						medium: '/assets/geology-earth-medium',
+						large: '/assets/geology-earth',
 					},
 				},
 			},
@@ -193,23 +193,23 @@ const planetSeeder: Prisma.PlanetCreateInput[] = [
 			create: {
 				planet: {
 					create: {
-						small: '/assets/planet-mars-small.svg',
-						medium: '/assets/planet-mars-medium.svg',
-						large: '/assets/planet-mars.svg',
+						small: '/assets/planet-mars-small',
+						medium: '/assets/planet-mars-medium',
+						large: '/assets/planet-mars',
 					},
 				},
 				internal: {
 					create: {
-						small: '/assets/planet-mars-internal-small.svg',
-						medium: '/assets/planet-mars-internal-medium.svg',
-						large: '/assets/planet-mars-internal.svg',
+						small: '/assets/planet-mars-internal-small',
+						medium: '/assets/planet-mars-internal-medium',
+						large: '/assets/planet-mars-internal',
 					},
 				},
 				geology: {
 					create: {
-						small: '/assets/geology-mars-small.png',
-						medium: '/assets/geology-mars-medium.png',
-						large: '/assets/geology-mars.png',
+						small: '/assets/geology-mars-small',
+						medium: '/assets/geology-mars-medium',
+						large: '/assets/geology-mars',
 					},
 				},
 			},
@@ -247,23 +247,23 @@ const planetSeeder: Prisma.PlanetCreateInput[] = [
 			create: {
 				planet: {
 					create: {
-						small: '/assets/planet-jupiter-small.svg',
-						medium: '/assets/planet-jupiter-medium.svg',
-						large: '/assets/planet-jupiter.svg',
+						small: '/assets/planet-jupiter-small',
+						medium: '/assets/planet-jupiter-medium',
+						large: '/assets/planet-jupiter',
 					},
 				},
 				internal: {
 					create: {
-						small: '/assets/planet-jupiter-internal-small.svg',
-						medium: '/assets/planet-jupiter-internal-medium.svg',
-						large: '/assets/planet-jupiter-internal.svg',
+						small: '/assets/planet-jupiter-internal-small',
+						medium: '/assets/planet-jupiter-internal-medium',
+						large: '/assets/planet-jupiter-internal',
 					},
 				},
 				geology: {
 					create: {
-						small: '/assets/geology-jupiter-small.png',
-						medium: '/assets/geology-jupiter-medium.png',
-						large: '/assets/geology-jupiter.png',
+						small: '/assets/geology-jupiter-small',
+						medium: '/assets/geology-jupiter-medium',
+						large: '/assets/geology-jupiter',
 					},
 				},
 			},
@@ -300,23 +300,23 @@ const planetSeeder: Prisma.PlanetCreateInput[] = [
 			create: {
 				planet: {
 					create: {
-						small: '/assets/planet-saturn-small.svg',
-						medium: '/assets/planet-saturn-medium.svg',
-						large: '/assets/planet-saturn.svg',
+						small: '/assets/planet-saturn-small',
+						medium: '/assets/planet-saturn-medium',
+						large: '/assets/planet-saturn',
 					},
 				},
 				internal: {
 					create: {
-						small: '/assets/planet-saturn-internal-small.svg',
-						medium: '/assets/planet-saturn-internal-medium.svg',
-						large: '/assets/planet-saturn-internal.svg',
+						small: '/assets/planet-saturn-internal-small',
+						medium: '/assets/planet-saturn-internal-medium',
+						large: '/assets/planet-saturn-internal',
 					},
 				},
 				geology: {
 					create: {
-						small: '/assets/geology-saturn-small.png',
-						medium: '/assets/geology-saturn-medium.png',
-						large: '/assets/geology-saturn.png',
+						small: '/assets/geology-saturn-small',
+						medium: '/assets/geology-saturn-medium',
+						large: '/assets/geology-saturn',
 					},
 				},
 			},
@@ -353,23 +353,23 @@ const planetSeeder: Prisma.PlanetCreateInput[] = [
 			create: {
 				planet: {
 					create: {
-						small: '/assets/planet-uranus-small.svg',
-						medium: '/assets/planet-uranus-medium.svg',
-						large: '/assets/planet-uranus.svg',
+						small: '/assets/planet-uranus-small',
+						medium: '/assets/planet-uranus-medium',
+						large: '/assets/planet-uranus',
 					},
 				},
 				internal: {
 					create: {
-						small: '/assets/planet-uranus-internal-small.svg',
-						medium: '/assets/planet-uranus-internal-medium.svg',
-						large: '/assets/planet-uranus-internal.svg',
+						small: '/assets/planet-uranus-internal-small',
+						medium: '/assets/planet-uranus-internal-medium',
+						large: '/assets/planet-uranus-internal',
 					},
 				},
 				geology: {
 					create: {
-						small: '/assets/geology-uranus-small.png',
-						medium: '/assets/geology-uranus-medium.png',
-						large: '/assets/geology-uranus.png',
+						small: '/assets/geology-uranus-small',
+						medium: '/assets/geology-uranus-medium',
+						large: '/assets/geology-uranus',
 					},
 				},
 			},
@@ -406,23 +406,23 @@ const planetSeeder: Prisma.PlanetCreateInput[] = [
 			create: {
 				planet: {
 					create: {
-						small: '/assets/planet-neptune-small.svg',
-						medium: '/assets/planet-neptune-medium.svg',
-						large: '/assets/planet-neptune.svg',
+						small: '/assets/planet-neptune-small',
+						medium: '/assets/planet-neptune-medium',
+						large: '/assets/planet-neptune',
 					},
 				},
 				internal: {
 					create: {
-						small: '/assets/planet-neptune-internal-small.svg',
-						medium: '/assets/planet-neptune-internal-medium.svg',
-						large: '/assets/planet-neptune-internal.svg',
+						small: '/assets/planet-neptune-internal-small',
+						medium: '/assets/planet-neptune-internal-medium',
+						large: '/assets/planet-neptune-internal',
 					},
 				},
 				geology: {
 					create: {
-						small: '/assets/geology-neptune-small.png',
-						medium: '/assets/geology-neptune-medium.png',
-						large: '/assets/geology-neptune.png',
+						small: '/assets/geology-neptune-small',
+						medium: '/assets/geology-neptune-medium',
+						large: '/assets/geology-neptune',
 					},
 				},
 			},
