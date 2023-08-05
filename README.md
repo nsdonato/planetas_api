@@ -75,7 +75,31 @@ Local: localhost:8000/api/planet
 ```http
   GET /api/planet
 ```
+# Ejecutando las pruebas con Playwright
 
+```bash
+  # Runs the end-to-end tests.
+  npx playwright test
+```
+```bash
+  # Starts the interactive UI mode.
+  npx playwright test --ui
+```
+
+```bash
+  # Runs the tests only on Desktop Chrome.
+  npx playwright test --project=chromium
+```
+
+```bash
+  # Runs the tests in a specific file.
+  npx playwright test example
+```
+
+```bash
+  # Runs the tests in debug mode.
+  npx playwright test --debug
+```
 
 ## Diagrama de la base de datos
 
