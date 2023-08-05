@@ -3,6 +3,7 @@ import { test, expect, APIRequestContext } from '@playwright/test'
 // Request context is reused by all tests in the file.
 let apiContext: APIRequestContext
 
+// Before all tests, create a new API request context.
 test.beforeAll(async ({ playwright }) => {
 	apiContext = await playwright.request.newContext({
 		// All requests we send go to this API endpoint.
@@ -13,17 +14,20 @@ test.beforeAll(async ({ playwright }) => {
 	})
 })
 
+// After all tests, dispose all responses.
 test.afterAll(async () => {
 	// Dispose all responses.
 	await apiContext.dispose()
 })
 
 /**
- * Sample API call.
+ * Get a planet.
  */
 test('get a planet', async () => {
 	const planet = await apiContext.get('/api/planet/jupiter')
+	// Expect the response to be OK.
 	expect(planet.ok()).toBeTruthy()
+	// Expect the response to contain the expected data.
 	expect(await planet.json()).toEqual(
 		expect.objectContaining({
 			id: '64c3ad5358fda7cddbe38a63',
@@ -37,7 +41,7 @@ test('get a planet', async () => {
 })
 
 /**
- * Sample API call.
+ * Try to get an inexistent planet
  */
 test('get an inexistent planet', async () => {
 	const planet = await apiContext.get('/api/planet/badplanet')
