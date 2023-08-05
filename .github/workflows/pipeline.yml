@@ -5,9 +5,10 @@ on:
   pull_request:
     branches: [main]
 jobs:
-  deploy:
+  check-deploy:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    name: 👷🏻‍♀️ Check deploy
     steps:
       - name: Wait for Render Deployment
         uses: bounceapp/render-action@0.6.0
@@ -18,24 +19,33 @@ jobs:
           retries: 20
           wait: 16000
           sleep: 30000
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - name: Install dependencies
-        run: npm ci
-      - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
-      - name: Run Playwright tests
-        run: npx playwright test
-      - uses: actions/upload-artifact@v3
-        if: always()
-        with:
-          name: playwright-report
-          path: playwright-report/
-          retention-days: 30
-      - name: Publish JUnit Report
-        uses: mikepenz/action-junit-report@v3
-        if: always() # always run even if the previous step fails
-        with:
-          report_paths: 'junit-results/*.xml'
+  testing:
+    needs: [ check-deploy ]
+    runs-on: ubuntu-latest
+    name: 🧐 Testing
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '18.x'
+    - name: Install dependencies
+      run: npm ci
+    - name: Install Playwright
+      run: npx playwright install --with-deps
+    - name: Run Playwright tests
+      run: npx playwright test
+    - uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: playwright-test-results
+        path: test-results/
+    - uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: allure-test-results
+        path: allure-report/
+    - name: Publish JUnit Report
+      uses: mikepenz/action-junit-report@v3
+      if: always() # always run even if the previous step fails
+      with:
+        report_paths: 'junit-results/*.xml'
